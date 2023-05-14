@@ -1,11 +1,11 @@
 <?php
 include('db.php');
 $usuario=$_POST['usuario'];
-$password=$_POST['password'];
+$password=$_POST['contraseña'];
 
 
 
-$consulta="SELECT*FROM usuarios where usuario='$usuario' and password='$password'";
+$consulta="SELECT*FROM credencial where usuario='$usuario' and contraseña='$password'";
 $resultado=mysqli_query($conexion,$consulta);
 
 $filas=mysqli_num_rows($resultado);
